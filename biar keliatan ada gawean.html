@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Situs puisi dan esai Sayyid Muhammad Aziez.">
+  <meta name="keywords" content="Puisi, Esai, Sayyid Muhammad Aziez, Sastra, Filsafat, Refleksi">
+  <title>Hidup Dalam Kata</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fdfdfd;
+      color: #1a1a1a;
+    }
+
+    header {
+      background-color: white;
+      font-family: 'Oswald', sans-serif;
+      padding: 5px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h2 {
+      margin-left: 25px;
+      cursor: pointer;
+    }
+
+    header .menu-and-social {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    header .left-menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    header .left-menu a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-size: 1.1rem;
+    }
+
+    header .social-icons {
+      display: flex;
+      gap: 8px;
+    }
+
+    header .social-icons img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    header .social-icons a:hover img {
+      transform: scale(1.1);
+      filter: brightness(1.2);
+    }
+
+    #sub-header {
+      background-color: white;
+      padding: 60px 20px 30px;
+      text-align: center;
+    }
+
+    #sub-header p.main-text {
+      font-weight: bold;
+      font-size: 4rem;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    #sub-header p.sub-text {
+      font-size: 1.2rem;
+      font-weight: normal;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    main {
+      padding: 30px 20px;
+      background: linear-gradient(to bottom right, #fafafa, #eeeeee);
+      min-height: 60vh;
+    }
+
+    .post-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .post-card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .post-card h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      background-color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-family: 'Merriweather', serif;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 768px) {
+      #sub-header p.main-text {
+        font-size: 2.5rem;
+      }
+
+      #sub-header p.sub-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2 id="header-title">Sayyid Muhammad Aziez</h2>
+    <div class="menu-and-social">
+      <div class="left-menu">
+        <a href="#puisi">Puisi</a>
+        <a href="#esai">Esai</a>
+        <a href="#tentang">Tentang</a>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/sayyidunya/" target="_blank" aria-label="Instagram">
+          <img src="images/ig.png" alt="Instagram icon">
+        </a>
+        <a href="https://x.com/AlbertWolfgang_?s=09" aria-label="Twitter">
+          <img src="images/x.png" alt="Twitter icon">
+        </a>
+        <a href="https://letterboxd.com/SayyidDunya" aria-label="Letterboxd">
+          <img src="images/letterboxd.png" alt="Letterboxd icon">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div id="sub-header">
+    <p class="main-text">Hidup Dalam Kata</p>
+    <p class="sub-text">Selamat datang di ruang sunyi yang menghidupkan puisi dan esai tentang cinta, kegelisahan, dan kebermaknaan.</p>
+  </div>
+
+  <main>
+    <section class="post-list">
+      <div class="post-card">
+        <h3>Judul Puisi 1</h3>
+        <p>Cuplikan atau bait pertama puisi...</p>
+      </div>
+      <div class="post-card">
+        <h3>Judul Esai 1</h3>
+        <p>Cuplikan refleksi awal dari esai...</p>
+      </div>
+      <!-- Tambahkan kartu lain di sini -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sayyid Muhammad Aziez. Semua hak cipta dilindungi.</p>
+  </footer>
+
+  <script>
+    document.getElementById("header-title").addEventListener("click", function() {
+      location.reload();
+    });
+  </script>
+</body>
+</html>

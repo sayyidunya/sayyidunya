@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fefefe;
+    color: #333;
+  }
+  
+  header {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tagline {
+    font-style: italic;
+    color: #666;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #eee;
+    font-size: 0.9em;
+  }
+
+  
