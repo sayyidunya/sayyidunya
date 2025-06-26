@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+  .spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 40%);
+  }
+  .glow-button {
+    transition: box-shadow 0.3s ease;
+  }
+  .glow-button:hover {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.5);
+  }
+</style>
+</head>
+<body class="dark">
+  <div class="spotlight" id="spotlight"></div>
+  <div class="content flex items-center justify-center min-h-screen px-4">
+    <div class="text-center max-w-xl w-full mt-16 fade-in">
+      <img src="https://i.imgur.com/lpBSxCA.jpeg" alt="My Avatar" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-white slide-up cursor-pointer transition duration-300 transform hover:scale-105" onclick="openImageModal(this.src)" />
+      <h1 class="text-4xl font-extrabold text-white mb-4 tracking-tight glow-text slide-up">My little Profile ;)</h1>
+      <p class="text-base italic leading-relaxed mb-12 px-2 text-white glow-text slide-up">
+        Halo! Penyuka senyap dan cerita yang tinggal lama di kepala. Menyukai karya-karya Adam Elliot karena sunyinya tak pernah kosong, dan menulis di Medium sebagai cara menyimpan fragmen hati yang kadang lupa pulang.
+        Sehari-hari membaca buku dan komik sebagai pelarian manis dari dunia yang terlalu cepat. Menikmati ocehan netizen di X. Dan malam-malam diisi dengan lagu-lagu Jeff Buckley karena tidak semua cinta harus lantang untuk terasa dalam.
+      
+<div class="flex flex-wrap justify-center gap-4 slide-up mt-8">
+  <a href="https://hardcover.app/@sayyidunya?referrer_id=37971" target="_blank" class="bg-purple-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 w-40 text-center glow-button">Hardcover</a>
+  <a href="https://medium.com/@sayyidunia" target="_blank" class="bg-black text-white font-medium py-2 px-4 rounded-md transition duration-300 w-40 text-center glow-button">Medium</a>
+  <a href="https://open.spotify.com/user/317jkcm4le3rjgn33ekogbcp2y7a" target="_blank" class="bg-green-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 w-40 text-center glow-button">Spotify</a>
+  <a href="https://boxd.it/arGWB" target="_blank" class="bg-[#1d2b3a] text-white font-medium py-2 px-4 rounded-md transition duration-300 w-40 text-center glow-button">Letterboxd</a>
+  <a href="https://www.roblox.com/share?code=541924c4c513644d94c5b6148194d092&type=Profile&source=ProfileShare&stamp=1750905896398" target="_blank" class="bg-[#0d0d0d] text-white font-medium py-2 px-4 rounded-md transition duration-300 w-40 text-center glow-button">Roblox</a>
+  <a href="https://id.quora.com/profile/Sayyidunya?ch=10&oid=2226298401&share=0837e692&srid=hbZ1dF&target_type=user" target="_blank" class="bg-red-700 text-white font-medium py-2 px-4 rounded-md transition duration-300 w-40 text-center glow-button">Quora</a>
+</div></div>
+        
+      </div>
+    </div>
+  </div>
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+    <img id="modalImage" class="max-w-full max-h-full rounded-lg shadow-2xl border-4 border-white" />
+  </div>
+  <script>
+    function openImageModal(src) {
+      const modal = document.getElementById('imageModal');
+      const image = document.getElementById('modalImage');
+      image.src = src;
+      modal.classList.remove('hidden');
+    }
+
+    document.getElementById('imageModal').addEventListener('click', function () {
+      this.classList.add('hidden');
+    });
+
+    const spotlight = document.getElementById('spotlight');
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      spotlight.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.25) 0%, transparent 40%)`;
+    });
+  </script>
+</body>
+</html>
