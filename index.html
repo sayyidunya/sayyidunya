@@ -93,10 +93,19 @@
 
     const spotlight = document.getElementById('spotlight');
     document.addEventListener('mousemove', (e) => {
-      const x = e.clientX;
-      const y = e.clientY;
-      spotlight.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.25) 0%, transparent 40%)`;
-    });
+  const x = e.clientX;
+  const y = e.clientY;
+  spotlight.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.25) 0%, transparent 40%)`;
+});
+
+document.addEventListener('touchmove', (e) => {
+  if (e.touches.length > 0) {
+    const touch = e.touches[0];
+    const x = touch.clientX;
+    const y = touch.clientY;
+    spotlight.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.25) 0%, transparent 40%)`;
+  }
+});
   </script>
   
   
