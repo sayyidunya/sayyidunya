@@ -26,9 +26,35 @@
   .glow-button:hover {
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.5);
   }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.9; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.4); }
+  }
+  .star {
+    position: fixed;
+    background: radial-gradient(circle, rgba(173, 216, 230, 0.9) 0%, rgba(138, 43, 226, 0.7) 70%, transparent 100%);
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+    pointer-events: none;
+    z-index: 0;
+  }
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+  }
+
+  .fade-link {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .fade-out {
+    animation: fadeOut 0.5s forwards;
+  }
 </style>
 </head>
-<body class="dark">
+<body class="dark fade-link" style="opacity: 0; transition: opacity 0.8s ease;">
   <div class="spotlight" id="spotlight"></div>
   <div class="content flex items-center justify-center min-h-screen px-4">
     <div class="text-center max-w-xl w-full mt-16 fade-in">
@@ -72,5 +98,38 @@
       spotlight.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.25) 0%, transparent 40%)`;
     });
   </script>
+  
+  
+  
+  
+  
+  
+  <script>
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = Math.random() * 100 + 'vh';
+      star.style.left = Math.random() * 100 + 'vw';
+      star.style.animationDelay = Math.random() * 2 + 's';
+      const size = Math.random() * 2 + 1;
+      star.style.width = size + 'px';
+      star.style.height = size + 'px';
+      document.body.appendChild(star);
+    }
+  document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    if (link.target !== '_blank') {
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 500);
+    }
+  });
+});
+window.addEventListener('DOMContentLoaded', () => {
+  document.body.style.opacity = '1';
+});
+</script>
 </body>
 </html>
