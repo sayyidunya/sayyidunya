@@ -9,6 +9,7 @@
   body {
     background-color: #000;
     color: #fff;
+    font-family: 'Georgia', serif;
   }
   .spotlight {
     position: fixed;
@@ -24,7 +25,7 @@
     transition: box-shadow 0.3s ease;
   }
   .glow-button:hover {
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.2);
   }
   @keyframes twinkle {
     0%, 100% { opacity: 0.9; transform: scale(1); }
@@ -32,7 +33,7 @@
   }
   .star {
     position: fixed;
-    background: radial-gradient(circle, rgba(173, 216, 230, 0.9) 0%, rgba(138, 43, 226, 0.7) 70%, transparent 100%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(200, 200, 255, 0.7) 70%, transparent 100%);
     border-radius: 50%;
     animation: twinkle 2s infinite ease-in-out;
     pointer-events: none;
@@ -58,7 +59,7 @@
   <div class="spotlight" id="spotlight"></div>
   <div class="content flex items-center justify-center min-h-screen px-4">
     <div class="text-center max-w-xl w-full mt-16 fade-in">
-      <img src="https://i.imgur.com/lpBSxCA.jpeg" alt="My Avatar" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-white slide-up cursor-pointer transition duration-300 transform hover:scale-105" onclick="openImageModal(this.src)" />
+      <img src="https://i.imgur.com/mKUGO2i.jpeg" alt="My Avatar" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-white slide-up cursor-pointer transition duration-300 transform hover:scale-105" onclick="openImageModal(this.src)" />
       <h1 class="text-4xl font-extrabold text-white mb-4 tracking-tight glow-text slide-up">My little Profile ;)</h1>
       <p class="text-base italic leading-relaxed mb-12 px-2 text-white glow-text slide-up">
         Halo! Penyuka senyap dan cerita yang tinggal lama di kepala. Menyukai karya-karya Adam Elliot karena sunyinya tak pernah kosong, dan menulis di Medium sebagai cara menyimpan fragmen hati yang kadang lupa pulang.
